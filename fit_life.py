@@ -1,38 +1,38 @@
-# Проект FitLife - MVP версия 1.0
+# Проект FitLife - MVP версия 1.1
+
+# Константы
+WATER_PER_KG = 30
+ML_PER_L = 1000
 
 # 1. Знакомство
 # Узнаем имя пользователя и делаем первую букву заглавной
 user_name = input("Введите Ваше имя: ").title()
 
 # Узнаем возраст пользователя и проверяем, что записанно число
-flag = True
-while (flag):
+while (True):
     user_age = input("Введите Ваш возраст (например: 19): ")
     try:
         user_age = int(float(user_age))
-        flag = False
+        break
     except ValueError:
         print("Ошибка! Введено не число")
-
 
 # 2. Сбор данных
 # Узнаем вес пользователя в кг
-flag = True
-while (flag):
+while (True):
     user_weight = input("Введите Ваш вес(например: 67.25): ")
     try:
         user_weight = round(float(user_weight), 2)
-        flag = False
+        break
     except ValueError:
         print("Ошибка! Введено не число")
 
 # Узнаем вес пользователя в кг
-flag = True
-while (flag):
+while (True):
     user_height = input("Введите Ваш рост (например: 1.75): ")
     try:
         user_height = round(float(user_height), 2)
-        flag = False
+        break
     except ValueError:
         print("Ошибка! Введено не число")
 
@@ -41,8 +41,7 @@ while (flag):
 bmi = round((user_weight / (user_height ** 2)), 1)
 
 # Подсчет воды: вес * 30 мл
-WATER_PER_KG = 30
-water_needed = user_weight * WATER_PER_KG / 1000
+water_needed = user_weight * WATER_PER_KG / ML_PER_L
 
 # 4. Вывод красивого результата
 print("=" * 50)  # Рамка для выделения вывода
