@@ -1,4 +1,4 @@
-# Проект FitLife - MVP версия 1.1
+# Проект FitLife - MVP версия 1.11
 
 # Константы
 WATER_PER_KG = 30
@@ -9,7 +9,7 @@ ML_PER_L = 1000
 user_name = input("Введите Ваше имя: ").title()
 
 # Узнаем возраст пользователя и проверяем, что записанно число
-while (True):
+while True:
     user_age = input("Введите Ваш возраст (например: 19): ")
     try:
         user_age = int(float(user_age))
@@ -19,7 +19,7 @@ while (True):
 
 # 2. Сбор данных
 # Узнаем вес пользователя в кг
-while (True):
+while True:
     user_weight = input("Введите Ваш вес(например: 67.25): ")
     try:
         user_weight = round(float(user_weight), 2)
@@ -28,7 +28,7 @@ while (True):
         print("Ошибка! Введено не число")
 
 # Узнаем вес пользователя в кг
-while (True):
+while True:
     user_height = input("Введите Ваш рост (например: 1.75): ")
     try:
         user_height = round(float(user_height), 2)
